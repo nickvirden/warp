@@ -998,6 +998,10 @@ pub enum FeatureFlag {
     /// mirrors kept in the persistent build cache instead of cloning each one
     /// from the remote. Disabling it restores direct, network-only checkouts.
     GitMirrorCache,
+
+    /// Gates the "Merge into tab" tab context-menu action, which moves every pane of one
+    /// tab into another tab as splits.
+    MergeTabIntoTab,
 }
 
 static FLAG_STATES: [AtomicBool; cardinality::<FeatureFlag>()] =
